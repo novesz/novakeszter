@@ -30,6 +30,35 @@ app.get("/regiok", (req, res) => {
  })
 })
 
+//3 api feladat:
+//1. megoldás:
+app.get("/2017", (req, res) => {
+ const sql = "SELECT * FROM kozutak.kozutak_hossza where kozutak_hossza.datum = '2017'"; 
+ db.query(sql, (err, result) => {
+ if (err) return res.json(err);
+ return res.json(result)
+ })
+})
+
+//2. megoldás: 
+app.get("/avg", (req, res) => {
+ const sql = "SELECT avg(kozutak_hossza.hossz) as 'Az átlag közutak hossza.' from kozutak.kozutak_hossza;"; 
+ db.query(sql, (err, result) => {
+ if (err) return res.json(err);
+ return res.json(result)
+ })
+})
+
+//3. megoldás
+app.get("/Bmegye", (req, res) => {
+ const sql = "SELECT * FROM kozutak.megyek where megyek.megyenev like 'B%'"; 
+ db.query(sql, (err, result) => {
+ if (err) return res.json(err);
+ return res.json(result)
+ })
+})
+
+
 // Régió hozzáadása
 app.post("/ujregio", (req, res) => {
  const sql = "INSERT INTO `regiok` (`Rid`, `regionev`, `regio_tipusa`) VALUES (?, ?, ?)";
