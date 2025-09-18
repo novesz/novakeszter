@@ -1,0 +1,32 @@
+.dkep {
+  width: 150px;       /* méret, állíthatod */
+  height: auto;
+  animation: spin 1s linear infinite;
+  border-radius: 70%;
+}
+
+/* Forgatás animáció */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.reg-btn {
+  background-color: #4CAF50; /* Zöld háttér */
+  border: none;              /* Nincs keret */
+  color: white;              /* Fehér szöveg */
+  padding: 15px 32px;       /* Párnázás */
+  text-align: center;        /* Középre igazítás */
+  text-decoration: none;     /* Nincs aláhúzás */
+  display: inline-block;     /* Inline blokk elem */
+  font-size: 16px;          /* Betűméret */
+  margin: 4px 2px;          /* Külső margó */
+  cursor: pointer;          /* Mutató kurzor */
+  border-radius: 12px;      /* Lekerekített sarkok */
+  transition-duration: 0.4s; /* Átmenet időtartama */
+}
+

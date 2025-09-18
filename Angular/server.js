@@ -1,20 +1,15 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
-const mysql = require("mysql");
+//const mysql = require("mysql");
 const bodyParser = require('body-parser');
-
+require('dotenv').config();
 app.use(bodyParser.json());
 app.use(cors());
-
+//const mysql = require("mysq2");
+const {db} = require('./db');
 // Adatbázis kapcsolat létrehozása
-const db = mysql.createConnection({
- user: "root",
- host: "127.0.0.1",
- port: 3307,
- password: "",
- database: "kozutak",
-});
+
 
 // Gyökér útvonal, tesztelésre
 app.get("/", (req, res) => {
@@ -128,7 +123,7 @@ app.delete("/torles/", (req, res) => {
  });
 });
 
-// Szerver indítása a 3001-es porton
-app.listen(3001, () => {
- console.log("Server is running on port 3001");
+// Szerver indítása a 3007-es porton
+app.listen(3007, () => {
+ console.log("localhost:3007-on fut!");
 });
