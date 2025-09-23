@@ -22,6 +22,7 @@ function Home() {
                 <a className="nav-link" href="/regiok">Regiok</a>
                 </li>
             </ul>
+            
         </div>
  
   </div>

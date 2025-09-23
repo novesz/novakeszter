@@ -6,6 +6,7 @@ import Regk from './Regk.jsx'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
+
 function App() {
   
 
