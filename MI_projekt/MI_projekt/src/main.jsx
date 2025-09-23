@@ -1,10 +1,20 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
+import React, { useState } from 'react';
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import Alkalmazas from './components/Alkalmazas.jsx';
+// Bootstrap és komponenseinek importálása
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Navbar, Nav, Container, Form, Button, Spinner, Alert } from 'react-bootstrap';
+import { LinkContainer } from 'react-router-bootstrap';
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+
+
+
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+      <React.StrictMode>
+      <BrowserRouter>
+      <Alkalmazas />
+      </BrowserRouter>
+      </React.StrictMode>
+      );
